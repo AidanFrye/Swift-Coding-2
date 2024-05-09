@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KE5-Jo-u9k">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cat Breeds-->
+        <scene sceneID="w3U-7e-3AA">
+            <objects>
+                <tableViewController id="syl-sX-1gc" customClass="CatBreedTableViewController" customModule="Its_Raining_Cats_and_Dogs_in_the_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hcH-z0-SzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatBreedCell" id="2Ww-Pq-KKH" customClass="CatBreedTableViewCell" customModule="Its_Raining_Cats_and_Dogs_in_the_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Ww-Pq-KKH" id="vP6-Oa-eI6">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pma-WB-98W" userLabel="Image Stack">
+                                            <rect key="frame" x="20" y="3" width="60" height="40"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EI1-Um-sPy">
+                                                    <rect key="frame" x="0.0" y="0.33333333333333215" width="60" height="39.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="p08-UE-GPD"/>
+                                                        <constraint firstAttribute="width" constant="60" id="vSY-M3-tab"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WQM-24-Pow" userLabel="Text Stack">
+                                            <rect key="frame" x="101" y="3" width="87.333333333333314" height="42.666666666666664"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZK-uO-bvc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmZ-iQ-mZT">
+                                                    <rect key="frame" x="0.0" y="22.333333333333336" width="87.333333333333329" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WQM-24-Pow" firstAttribute="leading" secondItem="pma-WB-98W" secondAttribute="trailing" constant="21" id="RsW-RH-xf1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="CatBreedDescriptionLabel" destination="fmZ-iQ-mZT" id="pOd-cW-TvG"/>
+                                    <outlet property="CatBreedImageView" destination="EI1-Um-sPy" id="GrO-cS-HKl"/>
+                                    <outlet property="CatBreedNameLabel" destination="2ZK-uO-bvc" id="yA6-11-kkw"/>
+                                    <segue destination="5UT-NU-uXQ" kind="presentation" identifier="showCatDetailSegue" id="xZb-R0-4T7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="syl-sX-1gc" id="neY-OJ-kbC"/>
+                            <outlet property="delegate" destination="syl-sX-1gc" id="7Jy-z4-4Ra"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cat Breeds" id="1EX-4w-5I5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vuR-gC-vNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5.343511450381679" y="31.690140845070424"/>
+        </scene>
+        <!--Cat Detail View Controller-->
+        <scene sceneID="QHb-tV-OaM">
+            <objects>
+                <viewController id="m2b-mJ-Td1" customClass="CatDetailViewController" customModule="Its_Raining_Cats_and_Dogs_in_the_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNf-2M-ZwA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-XA-s5y">
+                                <rect key="frame" x="0.0" y="116" width="393" height="367"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-7q-VDb">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5Y-rT-UVU">
+                                        <rect key="frame" x="0.0" y="128" width="393" height="239"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P5Y-rT-UVU" firstAttribute="leading" secondItem="bDH-XA-s5y" secondAttribute="leading" id="WeX-0n-uSe"/>
+                                    <constraint firstAttribute="trailing" secondItem="P5Y-rT-UVU" secondAttribute="trailing" id="rrJ-7L-Fwi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nvl-XR-ZUL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bDH-XA-s5y" firstAttribute="centerY" secondItem="zNf-2M-ZwA" secondAttribute="centerY" id="51j-yI-trS"/>
+                            <constraint firstItem="nvl-XR-ZUL" firstAttribute="bottom" secondItem="bDH-XA-s5y" secondAttribute="bottom" constant="300" id="RPK-st-hiU"/>
+                            <constraint firstItem="bDH-XA-s5y" firstAttribute="centerX" secondItem="zNf-2M-ZwA" secondAttribute="centerX" id="ReD-7g-gUH"/>
+                            <constraint firstItem="bDH-XA-s5y" firstAttribute="top" secondItem="nvl-XR-ZUL" secondAttribute="top" constant="60" id="T4m-Hc-ROq"/>
+                            <constraint firstItem="nvl-XR-ZUL" firstAttribute="trailing" secondItem="bDH-XA-s5y" secondAttribute="trailing" id="mfS-UX-e9Q"/>
+                            <constraint firstItem="bDH-XA-s5y" firstAttribute="leading" secondItem="nvl-XR-ZUL" secondAttribute="leading" id="y9o-g4-Qzj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5yn-v7-Glv"/>
+                    <connections>
+                        <outlet property="catDetaiImage" destination="NJM-7q-VDb" id="LFP-1w-CpN"/>
+                        <outlet property="catDetailLabel" destination="P5Y-rT-UVU" id="XGG-FY-7KS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWR-hO-xfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889.3129770992366" y="31.690140845070424"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NH4-oo-MF5">
+            <objects>
+                <navigationController id="KE5-Jo-u9k" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cZQ-jA-WGH">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="syl-sX-1gc" kind="relationship" relationship="rootViewController" id="j6g-Qx-LtR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRB-gB-syQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-912" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GbL-DQ-DYu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5UT-NU-uXQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EYc-PO-5hb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m2b-mJ-Td1" kind="relationship" relationship="rootViewController" destinationCreationSelector="viewCatDetails:sender:" id="rcl-oZ-8Pq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXs-PL-zRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.59541984732823" y="31.690140845070424"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.image" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
