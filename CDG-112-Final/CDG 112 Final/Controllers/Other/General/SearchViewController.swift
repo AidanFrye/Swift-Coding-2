@@ -1,0 +1,19 @@
+//
+//  SearchViewController.swift
+//  CDG 112 Final
+//
+//  Created by lab on 4/25/24.
+//
+
+import UIKit
+
+class SearchViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+}
